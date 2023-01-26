@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: rgb(146, 7, 105);
+    --primary-color: #EBCE07
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 45px;
+}
+
+.row {
+    top: 20px;
+    padding: 0 2%;
+    margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 80px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-button {
+    color: white;
+    align-items: center;
+}
+
+
+.container button {
+    justify-self: center;
+    width: 200px;
+    height: 50px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.inputBox {
+    height: 30px;
+    margin: 0 100px;
+    transition: .5s;
+}
+
+.inputBox label {
+    display: block;
+    cursor: text;
+}
+
+.inputBox input{
+    height: 3px;
+    width: 170px;
+}
+
+.inputBox input:hover{
+    height: 100%;
+    transition: .5s;
+}
+
+.inputBox input:focus,
+.inputBox input:valid {
+    height: 100%;
+}
+
