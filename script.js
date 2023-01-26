@@ -9,15 +9,21 @@ function preencherForm (dados) {
     bairro.value = dados.bairro
     cidade.value = dados.localidade
     estado.value = dados.uf
-
 }
 
 async function pesquisarCep () {
     const cepValue = cep.value
     const url = `https://viacep.com.br/ws/${cepValue}/json/`
-    const promise = await fetch(url)
-    const dados = await promise.json()
-    preencherForm(dados) 
+        const promise = await fetch(url)
+        const dados = await promise.json()
+    
+        if(dados.hasOwnProperty('erro')) {
+            endereco.value = "CEP não encontrado"
+    
+        }else{
+            preencherForm(dados) 
+        }
 }
+
 
 cep.addEventListener('focusout', pesquisarCep)
